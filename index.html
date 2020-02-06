@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#FFFEF7" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>WīF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__grid">
+                <div>
+                    <a href="#homePage">
+                        <img id="logo" src="./static/logo.svg" alt="">
+                        <img id="logo-red" src="./static/logo-red.svg" alt="" style="display: none;">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <a href="#aboutUs">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#sampleRoom">SAMPLE ROOM & LIBRARY</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article id="homePage" class="landing">
+            <div class="container">
+                <div class="landing__grid">
+                    <section class="landing__text">
+                        <h2>HELLO!</h2>
+                        <p>Thank you for your interest in WīF. Our website will be up and running soon. In the meantime, let us tell you a little bit about wīf and why it’s transforming the local fashion industry.</p>
+                    </section>
+                    <section class="landing__buttons">
+                        <a href="https://wa.me/15551234567">
+                            <div class="ask-button">
+                                <div class="ask-button__grid">
+                                    <p>Ask Us Anything!</p>
+                                    <img src="./static/wa.svg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="mailto:info@wifworld.com">
+                            <div class="ask-button">
+                                <div class="ask-button__grid">
+                                    <p>Email Us</p>
+                                    <p style="justify-self: end;">Info@wifworld.com</p>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </article>
+        <article id="aboutUs" class="about-us">
+            <div class="container">
+                <div class="about-us__grid">
+                    <section>
+                        <h2 class="txt-subhead">ABOUT US</h2>
+                        <p class="txt-body">WĪF is a one-stop supply chain solution applicable for all fashion brands. We understand that sourcing fabrics has been a long, expensive and most challenging process. Here at WĪF, we provide a platform where anyone can source fabrics faster, easier and more efficient through both online and offline.<br><br>
+                        Experienced first hand, the female founders of WĪF envision the platform to contribute for a much stronger & sustainable ecosystem by streamlining the supply chain process and its current industry imbalances.</p>
+                    </section>
+                </div>
+            </div>
+        </article>
+        <article id="sampleRoom" class="sample-room">
+            <div class="container">
+                <div class="sample-room__grid">
+                    <section class="sample-room__details">
+                        <h2 class="txt-subhead">SAMPLE ROOM & LIBRARY</h2>
+                        <p class="txt-body">Located in Jakarta, WĪF has a designed sample room available for anyone. Booked through an appointment, you can view our complete fabric catalogues from the comfort of our sample room.  A sales assistance will be ready to assist you for the full services including requesting samples and placing orders during and after your visit. </p>
+                    </section>
+                    <section class="sample-room__image">
+                        <img src="" alt="">
+                    </section>
+                    <section class="sample-room__location">
+                        <h3>Grand Rubina Business Park</h3>
+                        <p>
+                            10th Floor<br>
+                            Jl. HR Rasuna Said, Karet Kuningan, Setiabudi<br>
+                            Jakarta Selatan, 12940
+                        </p>
+                    </section>
+                    <section class="sample-room__operation">
+                        <h3>Operation Hours</h3>
+                        <p>
+                            Monday-Friday 10:00am – 16:00pm<br>
+                            <span style="margin-right: 2.5em;">Phone</span>:  <a href="tel:+6282223338897">(+62) 822 2333 8897</a><br>
+                            <span style="margin-right: 1em;">Instagram</span>:  <a href="https://instagram.com/wifworld">@wifworld</a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var about = $("#aboutUs").offset();
+                if (scroll > about.top-80) {
+                    $(".header").css("background" , "#FFFEF7");
+                    $("#logo").hide();
+                    $("#logo-red").show();
+                    $(".header__nav li").css("color" , "#261F1C");
+                }
+
+                else{
+                    $(".header").css("background" , "transparent");
+                    $("#logo").show();
+                    $("#logo-red").hide();
+                    $(".header__nav li").css("color" , "white");
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
