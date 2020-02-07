@@ -272,6 +272,17 @@ a:hover {
   grid-area: sample-image;
 }
 
+.sample-room__image img {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .sample-room__image img {
+    margin-top: 2.5rem;
+  }
+}
+
 .sample-room__location h3, .sample-room__operation h3 {
   font-size: 0.625em;
   font-weight: 600;

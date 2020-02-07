@@ -246,6 +246,15 @@ a:hover {
 
     &__image {
         grid-area: sample-image;
+        
+        img {
+            width: 100%;
+            margin: 1rem 0;
+
+            @include screen-tablet-up {
+                margin-top: 2.5rem;
+            }
+        }
     }
     &__location, &__operation {
         h3 {
