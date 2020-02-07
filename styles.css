@@ -203,7 +203,6 @@ a:hover {
 .ask-button img {
   -ms-grid-column-align: end;
       justify-self: end;
-  height: 100%;
 }
 
 .about-us {
